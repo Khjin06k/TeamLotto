@@ -12,11 +12,12 @@ spring:
   #Postgresql
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/team_lotto?currentSchema=public #??? ??????? ??
-    username: #${POSTGRESQL_USER} #user ?? ? ????? ?? ?????? ??
-    password: #${POSTGRESQL_PASSWORD}
+    #url: jdbc:postgresql://localhost:5432/team_lotto?currentSchema=public #로컬
+    url: ${POSTGRESQL_URL}
+    username: ${POSTGRESQL_USER}
+    password:  ${POSTGRESQL_PASSWORD}
 
-  #h2 ???? ?? ??? ??? ?? h2 ?? ??
+  #h2 설정
 #  h2:
 #    console:
 #      enabled: true
