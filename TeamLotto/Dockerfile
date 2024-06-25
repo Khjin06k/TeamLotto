@@ -1,4 +1,4 @@
-FROM gradle:7.4-jdk17-alpine as builder
+FROM gradle:8.0-jdk17-alpine as builder
 WORKDIR /build
 
 # 그래들 파일이 변경되었을 때만 새롭게 의존패키지 다운로드 받게함.
@@ -23,7 +23,5 @@ USER nobody
 ENTRYPOINT [ \
    "java", \
    "-jar", \
-   "-Djava.security.egd=file:/dev/./urandom", \
-   "-Dsun.net.inetaddr.ttl=0", \
    "TeamLotto-0.0.1-SNAPSHOT.jar" \
 ]
